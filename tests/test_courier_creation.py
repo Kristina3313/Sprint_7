@@ -1,19 +1,8 @@
 import allure
-import pytest
-from utils.api_client import APIClient
-from pages.courier_page import CourierPage
 
 
 @allure.story('Создание курьера')
 class TestCourierCreation:
-    @pytest.fixture
-    def api_client(self):
-        return APIClient()
-
-    @pytest.fixture
-    def courier_page(self, api_client):
-        return CourierPage(api_client)
-
     @allure.title('Создание курьера с передачей обязательных полей')
     def test_create_courier(self, courier_page):
         courier_data = courier_page.valid_courier_data()

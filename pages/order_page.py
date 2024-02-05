@@ -2,7 +2,7 @@ import allure
 from utils.api_client import APIClient
 
 
-class OrderPage:
+class OrderApi:
     def __init__(self, api_client: APIClient):
         self.api_client = api_client
 
@@ -14,4 +14,3 @@ class OrderPage:
     def get_orders(self, courierId=None):
         params = {'courierId': courierId} if courierId is not None else {}
         return self.api_client.get('/api/v1/orders', params=params)
-

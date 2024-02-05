@@ -1,19 +1,8 @@
 import allure
-import pytest
-from utils.api_client import APIClient
-from pages.courier_page import CourierPage
 
 
 @allure.story('Авторизация курьера')
 class TestCourierLogin:
-    @pytest.fixture
-    def api_client(self):
-        return APIClient()
-
-    @pytest.fixture
-    def courier_page(self, api_client):
-        return CourierPage(api_client)
-
     @allure.title('Успешная авторизация')
     def test_successful_login(self, courier_page):
         login_data = {

@@ -2,9 +2,10 @@ import time
 import allure
 
 
-class CourierPage:
+class CourierApi:
     def __init__(self, api_client):
         self.api_client = api_client
+        self.courier_id = None
 
     @allure.step('Создание курьера')
     def create_courier(self, data):
