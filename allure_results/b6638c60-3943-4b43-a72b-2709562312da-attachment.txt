@@ -1,0 +1,1 @@
+Error during API POST request to http://qa-scooter.praktikum-services.ru/api/v1/courier: 409 Client Error: Conflict for url: http://qa-scooter.praktikum-services.ru/api/v1/courier
